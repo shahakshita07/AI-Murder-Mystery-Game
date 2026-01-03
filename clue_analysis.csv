@@ -1,0 +1,8 @@
+clue_name,description,affects_murderer,constraint_weight
+bloodstained_glove,"Found in Library, belongs to Heiress",TRUE,0
+shattered_wine_glass,Butler admits he dropped it accidentally,FALSE,0
+suspicious_ledger,Shows payments from Heiress to Chef,TRUE,0
+missing_knife,Red herring - not the murder weapon,FALSE,0
+poison_analysis,Wine contained deadly poison,FALSE,0
+dining_room_scene,Murder occurred in Dining Room,FALSE,0
+inheritance_motive,Heiress inherits father's estate,TRUE,0

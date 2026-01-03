@@ -1,0 +1,5 @@
+algorithm,purpose,time_complexity,space_complexity,implemented,use_case
+BFS Pathfinding,Room navigation and shortest path finding,"O(V + E) where V=vertices, E=edges",O(V),TRUE,Navigate between mansion rooms efficiently
+Minimax with Alpha-Beta Pruning,Optimal dialogue tree traversal,"O(b^(d/2)) best case, O(b^d) worst case",O(d),TRUE,Interrogation strategy optimization
+Constraint Satisfaction Problem,Evidence analysis and suspect evaluation,"O(d^n) where d=domain size, n=variables",O(n),TRUE,Solve murder mystery based on collected clues
+Wumpus World Inference,Hazard detection and safe navigation,O(n) for inference rules,O(n) for knowledge base,TRUE,Avoid dangerous rooms using logical reasoning

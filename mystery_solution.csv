@@ -1,0 +1,5 @@
+variable,solution,confidence,evidence_points,total_possible
+murderer,Heiress,100.00%,29,55
+weapon,Poison,100.00%,29,55
+location,Dining Room,100.00%,29,55
+motive,Inheritance,100.00%,29,55

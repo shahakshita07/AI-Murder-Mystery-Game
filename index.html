@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Mansion Murder - AI Algorithm Demonstration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="welcome-content">
+            <h1>🎭 Classic Mansion Murder</h1>
+            <div class="story-intro">
+                <p style="text-align:center; font-weight:bold;">WELCOME DETECTIVE!</p>
+                <div style="text-align:left;">
+                    <p>You will be given any one of the following cases to solve.</p>
+                    <p>Find all the relevant clues and interrogate all the suspects to solve these classic whodunit cases.</p>
+                    <p>All the very best!</p>
+                    <br>
+                    <p><strong>Ashford Mansion Investigation:</strong><br>
+                    Unravel the secrets of a stormy night where Lord Ashford is found dead in his grand Victorian mansion.</p>
+                    <br>
+                    <p><strong>Midnight Gala Investigation:</strong><br>
+                    Investigate a high-society gala that turns fatal when Lady Evelyn Crowhurst is mysteriously poisoned during a blackout.</p>
+                    <br>
+                    <p><strong>Crypt Keeper Investigation:</strong><br>
+                    Uncover hidden motives and ancient dangers after a renowned professor is killed in a cursed family crypt.</p>
+                    <br>
+                    <p><strong>Warning:</strong> Some rooms are dangerous!</p>
+                </div>
+            </div>            
+            <button class="btn btn--primary btn--lg" onclick="startGame()">Begin Investigation</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <h1>🎭 Ashford Mansion Investigation</h1>
+            <div class="game-stats">
+                <span>Current Room: <strong id="current-room">Hall</strong></span>
+                <span>Clues Found: <strong id="clues-found">0/4</strong></span>
+                <span>Confidence: <strong id="confidence">0%</strong></span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <!-- Mansion Map -->
+            <div class="mansion-section">
+                <h3>🏰 Mansion Layout</h3>
+                <div class="mansion-grid" id="mansion-grid">
+                    <!-- Grid will be populated by JavaScript -->
+                </div>
+                <div class="navigation-info">
+                    <p><strong>Navigation:</strong> Click on connected rooms to move</p>
+                    <div id="path-display" class="path-display"></div>
+                </div>
+                <div class="hazard-warnings" id="hazard-warnings"></div>
+            </div>
+
+            <!-- Evidence Panel -->
+            <div class="evidence-section">
+                <h3>🔍 Evidence Collected</h3>
+                <div class="evidence-list" id="evidence-list">
+                    <p class="no-evidence">No evidence collected yet...</p>
+                </div>
+                
+                <!-- Algorithm Visualization -->
+                <div class="algorithm-panel">
+                    <h4>📊 CSP Suspect Ranking</h4>
+                    <div class="suspect-rankings" id="suspect-rankings">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suspects Panel -->
+            <div class="suspects-section">
+                <h3>👥 Suspects</h3>
+                <div class="suspects-grid" id="suspects-grid"></div>
+                <!-- Make Accusation Button -->
+                <div class="accusation-section">
+                    <button class="btn btn--primary btn--full-width" onclick="makeAccusation()" id="accusation-btn" disabled>
+                        Make Final Accusation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interrogation Modal -->
+    <div id="interrogation-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="interrogation-title">Interrogation</h3>
+                <button class="modal-close" onclick="closeInterrogation()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="suspect-statement" id="suspect-statement"></div>
+                <div class="questions-section" id="questions-section">
+                    <h4>Choose your question:</h4>
+                    <div class="question-buttons" id="question-buttons">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="response-section hidden" id="response-section">
+                    <div class="suspect-response" id="suspect-response"></div>
+                    <button class="btn btn--secondary" onclick="continueInterrogation()">Continue Investigation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Accusation Modal -->
+    <div id="accusation-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Final Accusation</h3>
+            </div>
+            <div class="modal-body">
+                <p>Based on your investigation, who do you believe is the murderer?</p>
+                <div class="accusation-buttons" id="accusation-buttons">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Result Modal -->
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="result-title">Case Closed</h3>
+            </div>
+            <div class="modal-body">
+                <div id="result-content"></div>
+                <button class="btn btn--primary" onclick="restartGame()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

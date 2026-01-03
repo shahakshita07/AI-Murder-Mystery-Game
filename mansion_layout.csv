@@ -1,0 +1,9 @@
+room,connections,clue,hazard,warnings
+Hall,"Study, Dining Room, Conservatory",,,
+Study,"Hall, Library",Suspicious ledger with payments to Chef,,
+Library,Study,Bloodstained glove (belongs to Heiress),,
+Dining Room,"Hall, Kitchen",Shattered wine glass (Butler broke it),,
+Kitchen,"Dining Room, Cellar",Missing knife (red herring),,You smell gas from the Cellar
+Cellar,Kitchen,,Gas leak - entering without caution = game over,
+Conservatory,"Hall, Secret Passage",,,You hear rumbling from the Secret Passage
+Secret Passage,Conservatory,,May collapse - you hear rumbling nearby,

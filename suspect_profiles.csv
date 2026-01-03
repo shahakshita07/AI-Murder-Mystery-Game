@@ -1,0 +1,5 @@
+role,name,personality,is_guilty,truth_level,suspicion_level
+Butler,James,"Calm, polite, but evasive",FALSE,5,3
+Maid,Clara,Nervous and chatty,FALSE,8,2
+Chef,Marco,Defensive and grumpy,FALSE,6,4
+Heiress,Sophia,"Elegant, clever, manipulative",TRUE,2,1
